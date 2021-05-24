@@ -49,3 +49,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Use MLB stats api to pull data to be displayed
+gem 'mlb_stats_api', '~> 0.2.5'
