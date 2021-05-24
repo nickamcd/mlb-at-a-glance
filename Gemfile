@@ -52,3 +52,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Use MLB stats api to pull data to be displayed
 gem 'mlb_stats_api', '~> 0.2.5'
+
+# Use normalize rails to normalize css styling across browsers
+gem 'normalize_rails', '~> 0.1.0'
