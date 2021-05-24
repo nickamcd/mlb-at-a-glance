@@ -10,13 +10,22 @@ class HomeController < ApplicationController
     # Get the list of schedule of games for date range of only today
     @schedule = @client.schedule({sport_id: 1, date: Date.today})
 
-    # Pull out Dates from schedule
-    @dates = @schedule['dates']
+    # Pull out games from dates[0] (today)
+    @games = @schedule['dates'][0]['games']
 
-    # Get today from result
-    @date = @dates[0]
+    # Array to hold game primary keys
+    @gamesPK = []
 
-    # Get games from today
-    @games = @date['games']
+    @games.each do |game|
+      @gamesPK.push(game['gamePk'])
+    end
+
+    # Array to hold line scores
+    @linescores = []
+
+    @gamesPK.each do |key|
+      @linescores.push(@client.linescore(key))
+    end
   end
+
 end
