@@ -1,9 +1,14 @@
-<h1>Hello</h1>
-<br>
-<br>
+<div class="container">
+  <div id="title">
+    <h1>MLB</h1>
+    <h2>At a Glance</h2>
+  </div>
 
-<% @linescores.each do |game| %>
-  <p><%= game %></p>
-<% end %>
 
-<h2>testing</h2>
+  <%= @linescores.length %> 
+  <div class="game-display-container">
+    <% @linescores.each do |game_linescore| %>
+      <div class="game-display"></div>
+    <% end %>
+  </div>
+</div>

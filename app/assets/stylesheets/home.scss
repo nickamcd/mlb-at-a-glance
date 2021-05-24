@@ -1,3 +1,31 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid red;
+}
+
+#title {
+  text-align: center;
+  border: 1px solid black;
+}
+
+.game-display-container {
+  width: 1000px;
+  border: 1px solid black;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
+  grid-gap: 10px;
+}
+
+.game-display {
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
