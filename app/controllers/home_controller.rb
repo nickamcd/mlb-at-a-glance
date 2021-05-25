@@ -1,7 +1,5 @@
 class HomeController < ApplicationController
   require 'mlb_stats_api'
-  require 'json'
-
 
   def index
     # Establish connection to stats api
@@ -15,7 +13,6 @@ class HomeController < ApplicationController
 
     # Array to hold game primary keys
     @gamesPK = []
-    @game_statuses = []
 
     @games.each do |game|
       @gamesPK.push(game['gamePk'])
@@ -23,11 +20,9 @@ class HomeController < ApplicationController
 
     # Array to hold line scores
     @linescores = []
-    @boxscores = []
 
     @gamesPK.each do |key|
       @linescores.push(@client.linescore(key))
-      @boxscores.push(@client.boxscore(key))
     end
 
   end

@@ -1,10 +1,19 @@
 <div class="game-display">
   <% if (linescore['innings'].length == 0) %>
-    <p><%= linescore['defense']['team']['name'] %></p>
-    <%= image_tag getLogo(linescore['defense']['team']['id']), :class => 'team-logo' %>
+    <span>
+      <div>
+        <%= linescore['defense']['team']['name'] %>
+      </div>
+      <div>
+        <%= image_tag getLogo(linescore['defense']['team']['id']), :class => 'team-logo' %>
+      </div>
+      
+    </span>
     <p>@</p>
-    <p><%= linescore['offense']['team']['name'] %></p>
-    <%= image_tag getLogo(linescore['offense']['team']['id']), :class => 'team-logo' %>
+    <span>
+      <%= linescore['offense']['team']['name'] %>
+      <%= image_tag getLogo(linescore['offense']['team']['id']), :class => 'team-logo' %>
+    </span>
   <% else %>
     <p>ingame/postgame</p>
   <% end %>
