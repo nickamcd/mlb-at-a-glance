@@ -8,7 +8,7 @@
 
   <div class="game-display-container">
     <% @linescores.each do |linescore| %>
-      <%= render 'linescores' %>
+      <%= render 'linescores', linescore: linescore %>
     <% end %>
   </div>
 </div>
