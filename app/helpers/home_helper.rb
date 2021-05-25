@@ -1,4 +1,12 @@
 module HomeHelper
+  def getLinescore(game_id)
+    @client.linescore(game_id)
+  end
+
+  def getBoxscore(game_id)
+    @client.boxscore(game_id)
+  end
+
   def getLogo(team_id)
     case team_id
     when 108

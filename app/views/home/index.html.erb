@@ -5,11 +5,11 @@
     <h2>At a Glance</h2>
   </div>
 
-  <%= @linescores.length %>  
+  <%= @games.length %>  
 
   <div class="game-display-container">
-    <% @linescores.each do |linescore| %>
-      <%= render 'linescores', linescore: linescore %>
+    <% @games.each do |game| %>
+      <%= render 'games', game: game %>
     <% end %>
   </div>
 </div>
