@@ -8,8 +8,8 @@
   <%= @games.length %>  
 
   <div class="game-display-container">
-    <% @games.each do |game| %>
-      <%= render 'games', game: game %>
+    <% @games.each_with_index do |game, i| %>
+      <%= render 'games', game: game, game_date: @game_dates[i] %>
     <% end %>
   </div>
 </div>
