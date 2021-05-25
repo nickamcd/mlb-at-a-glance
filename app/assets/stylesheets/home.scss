@@ -3,10 +3,9 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .container {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  border: 1px solid red;
+  border: 3px solid red;
 }
 
 #title {
@@ -27,8 +26,16 @@
 .game-display {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
   border: 1px solid green;
+}
+
+.game-display .teams {
+  border: 1px solid blue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .game-display span {

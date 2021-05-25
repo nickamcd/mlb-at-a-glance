@@ -1,26 +1,29 @@
 <div class="game-display">
   <% linescore = getLinescore(game) %>
   <% boxscore = getBoxscore(game) %>
+  <div class="teams">
+    <span>
+      <div class="away-team">
+        <%= boxscore['teams']['away']['team']['name'] %>
+      </div>
+      <div class="away-team-logo">
+        <%= image_tag getLogo(boxscore['teams']['away']['team']['id']), class: "team-logo" %>
+      </div>
+    </span>
 
-  <span>
-    <div class="away-team">
-      <%= boxscore['teams']['away']['team']['name'] %>
-    </div>
-    <div class="away-team-logo">
-      <%= image_tag getLogo(boxscore['teams']['away']['team']['id']), class: "team-logo" %>
-    </div>
-  </span>
+    <p>@</p>
 
-  <p>@</p>
+    <span>
+      <div class="home-team">
+        <%= boxscore['teams']['home']['team']['name'] %>
+      </div>
+      <div class="home-team-logo">
+        <%= image_tag getLogo(boxscore['teams']['home']['team']['id']), class: "team-logo" %>
+      </div>
+    </span>
+  </div>
 
-  <span>
-    <div class="home-team">
-      <%= boxscore['teams']['home']['team']['name'] %>
-    </div>
-    <div class="home-team-logo">
-      <%= image_tag getLogo(boxscore['teams']['home']['team']['id']), class: "team-logo" %>
-    </div>
-  </span>
-
-  <p><%= game_date.to_s %></p>
+  <div class="game-date">
+    <%= game_date %>
+  </div>
 </div>
