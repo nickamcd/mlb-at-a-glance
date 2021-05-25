@@ -7,6 +7,12 @@ module HomeHelper
     @client.boxscore(game_id)
   end
 
+  def convertStringToDateTime(datetime_string)
+    game_datetime = DateTime.parse(datetime_string)
+    adjusted_datetime = (game_datetime.to_time - 7.hours).to_datetime
+    adjusted_datetime.strftime("%l:%M %P")
+  end
+
   def getLogo(team_id)
     case team_id
     when 108
