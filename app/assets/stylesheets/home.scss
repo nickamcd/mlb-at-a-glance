@@ -21,7 +21,6 @@
   flex-direction: column;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  /* border: 3px solid red; */
 }
 
 /*
@@ -85,6 +84,7 @@
 */
 
 .game-display .teams {
+  padding-top: 3px;
   background-color: var(--team-bg-color);
   border-bottom: 1px solid var(--game-border-color); 
   color: white;
@@ -113,26 +113,52 @@
 
 /*
 --------------------
-  Game Previews
+  Ingame Preview
 --------------------
 */
 
 .ingame-container {
   height: 100%;
   display: flex;
-  flex-direction: row;
   padding: 2px;
   justify-content: space-between;
 }
 
 .score-container {
-  border: 1px solid red;
+  font-size: 20px;
 }
 
 .bases-container {
+  width: 50%;
   border: 1px solid yellow;
 }
 
 #inning-tracker {
-  border: 1px solid blue;
+  color: blue;
+  font-size: 18px;
+}
+
+#first-base {
+  background-color: pink;
+}
+
+#second-base {
+  background-color: aqua;
+}
+
+#third-base {
+  background-color: green;
+}
+
+/*
+--------------------
+  Postgame Preview
+--------------------
+*/
+
+.postgame-container {
+  height: 100%;
+  display: flex;
+  padding: 2px;
+  justify-content: space-evenly;
 }

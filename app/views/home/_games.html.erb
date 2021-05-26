@@ -10,7 +10,7 @@
     <% if MLBStatsAPI::Games.pregame_status?(game_status) %>
       <p><%= game_status %></p>
     <% elsif MLBStatsAPI::Games.postgame_status?(game_status) %>
-      <p><%= game_status %></p>
+      <%= render 'postgame', game_status: game_status, teams: teams %>
     <% else %>
       <%= render 'ingame', game_key: game_key, teams: teams %>
     <% end %>

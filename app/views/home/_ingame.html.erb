@@ -18,6 +18,13 @@
     </div>
   </div>
   <div id="inning-tracker">
-    <%= linescore['currentInning'] %>
+    <p>
+      <% if linescore['isTopInning'] %>
+        TOP
+      <% else %>
+        BOT
+      <% end %>
+      <%= linescore['currentInningOrdinal'] %>
+    </p>
   </div>
 </div>
