@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+:root {
+  --display-border-color: rgb(0, 0, 0);
+  --game-border-color: rgb(153, 153, 153);
+  --team-bg-color: rgb(208, 218, 226);
+  --time-bg-color: rgb(194, 204, 211);
+}
+
 /*
 --------------------
   Page wrapper
@@ -44,7 +51,8 @@
 
 .game-display-container {
   width: 1100px;
-  border: 1px solid black;
+  border: 5px solid var(--display-border-color);
+  border-radius: 5px;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -54,15 +62,16 @@
 
 .game-display {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   width: 100%;
-  border: 1px solid rgb(153, 153, 153);
+  border-radius: 5px;
+  border: 1px solid var(--game-border-color)
 }
 
 .game-display .teams {
-  background-color: rgb(197, 209, 219);
-  border-bottom: 1px solid rgb(153, 153, 153); 
+  background-color: var(--team-bg-color);
+  border-bottom: 1px solid var(--game-border-color); 
   width: 100%;
   display: flex;
   justify-content: center;
@@ -81,4 +90,6 @@
 
 .game-date {
   text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--time-bg-color);
 }

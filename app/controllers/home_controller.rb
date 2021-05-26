@@ -13,7 +13,7 @@ class HomeController < ApplicationController
     @games = @schedule['dates'][0]['games']
 
     # Array to hold game primary keys
-    @gamesPK = []
+    @game_keys = []
     # Array to hold game date/start time
     @game_dates = []
     # Array to hold pregame/postgame status if game is not currently
@@ -22,10 +22,9 @@ class HomeController < ApplicationController
     # Array to hold teams participarting in
     @game_teams = []
 
-    # Push primary key of games into array to use for API Queries
-    # Also push datetime of game for pregame/ingame status
+    #Iterate over games hash and pull out neccesary info
     @games.each do |game|
-      @gamesPK.push(game['gamePk'])
+      @game_keys.push(game['gamePk'])
       @game_dates.push(game['gameDate'])
       @game_statuses.push(game['status']['abstractGameState'])
       @game_teams.push(game['teams'])

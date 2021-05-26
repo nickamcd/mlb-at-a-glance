@@ -3,7 +3,7 @@
 
   <div class="game-date">
     <% game_start_datetime = convertStartTimeToLocal(game_date) %>
-    <%= game_start_datetime.strftime("%l:%M %P %Z") %>
+    <span>Scheduled Start Time: <%= game_start_datetime.strftime("%l:%M %P %Z") %></span>
   </div>
 
   <% if MLBStatsAPI::Games.pregame_status?(game_status) %>
@@ -16,7 +16,7 @@
     </div>
   <% else %>
     <div>
-      <p><%= game_status %></p>
+      <%= render 'ingame', teams: teams %>
     </div>  
   <% end %>
 </div>
