@@ -8,6 +8,7 @@
   --team-bg-color: rgb(90, 90, 90);
   --time-bg-color: rgb(109, 109, 109);
   --game-bg-color: rgb(215, 215, 225);
+  --base-size: 25px;
 }
 
 /*
@@ -139,15 +140,29 @@
 }
 
 #first-base {
-  background-color: pink;
+  top: 42px;
+  left: 100px;
 }
 
 #second-base {
-  background-color: aqua;
+  left: 75px;
+  bottom: 10px;
 }
 
 #third-base {
-  background-color: green;
+  left: 50px;
+  bottom: 12px;
+}
+
+.bases-container .base {
+  height: var(--base-size);
+  width: var(--base-size);
+  position: relative;
+  border: 1px solid var(--display-border-color);
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 /*
