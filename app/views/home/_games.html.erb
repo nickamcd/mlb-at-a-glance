@@ -6,17 +6,13 @@
     <span>Scheduled Start Time: <%= game_start_datetime.strftime("%l:%M %P %Z") %></span>
   </div>
 
-  <% if MLBStatsAPI::Games.pregame_status?(game_status) %>
-    <div>
+  <div class="game-container">
+    <% if MLBStatsAPI::Games.pregame_status?(game_status) %>
       <p><%= game_status %></p>
-    </div>
-  <% elsif MLBStatsAPI::Games.postgame_status?(game_status) %>
-    <div>
+    <% elsif MLBStatsAPI::Games.postgame_status?(game_status) %>
       <p><%= game_status %></p>
-    </div>
-  <% else %>
-    <div>
+    <% else %>
       <%= render 'ingame', teams: teams %>
-    </div>  
-  <% end %>
+    <% end %>
+  </div>
 </div>
