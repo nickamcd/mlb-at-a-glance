@@ -8,8 +8,7 @@ module HomeHelper
   end
 
   def convertStartTimeToLocal(datetime_string)
-    game_datetime = DateTime.parse(datetime_string).in_time_zone(TimeZone::Local.get())
-    game_datetime.strftime("%l:%M %P %Z")
+    DateTime.parse(datetime_string).in_time_zone(TimeZone::Local.get())
   end
 
   def getLogo(team_id)

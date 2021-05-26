@@ -18,11 +18,14 @@ class HomeController < ApplicationController
     # Array to hold game date/start time
     @game_dates = []
 
+    @game_statuses = []
+
     # Push primary key of games into array to use for API Queries
     # Also push datetime of game for pregame/ingame status
     @games_hash.each do |game|
       @games.push(game['gamePk'])
       @game_dates.push(game['gameDate'])
+      @game_statuses.push(game['status']['abstractGameState'])
     end
   end
 

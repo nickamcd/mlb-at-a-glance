@@ -5,11 +5,11 @@
     <h2>At a Glance</h2>
   </div>
 
-  <%= @games.length %>  
+  <p><%= @games.length %> Games Today</p> 
 
   <div class="game-display-container">
     <% @games.each_with_index do |game, i| %>
-      <%= render 'games', game: game, game_date: @game_dates[i] %>
+      <%= render 'games', game: game, game_date: @game_dates[i], game_status: @game_statuses[i] %>
     <% end %>
   </div>
 </div>
