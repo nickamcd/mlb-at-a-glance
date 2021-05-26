@@ -131,7 +131,6 @@
 
 .bases-container {
   width: 50%;
-  border: 1px solid yellow;
 }
 
 #inning-tracker {
@@ -163,6 +162,10 @@
      -moz-transform: rotate(45deg);
        -o-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.man-on-first, .man-on-second, .man-on-third {
+  background-color: yellow;
 }
 
 /*

@@ -2,7 +2,7 @@
   <%= render 'teams', teams: teams %>
 
   <div class="game-date">
-    <% game_start_datetime = convertStartTimeToLocal(game_date) %>
+    <% game_start_datetime = convert_start_time_to_local(game_date) %>
     <span>Scheduled Start Time: <%= game_start_datetime.strftime("%l:%M %P %Z") %></span>
   </div>
 

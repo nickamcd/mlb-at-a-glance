@@ -1,14 +1,38 @@
 module HomeHelper
-  def getLinescore(game_id)
+  def get_linescore(game_id)
     @client.linescore(game_id)
   end
 
-  def getBoxscore(game_id)
+  def get_boxscore(game_id)
     @client.boxscore(game_id)
   end
 
-  def convertStartTimeToLocal(datetime_string)
+  def convert_start_time_to_local(datetime_string)
     DateTime.parse(datetime_string).in_time_zone(TimeZone::Local.get())
+  end
+
+  def man_on_first(offense)
+    if offense['first']
+      return "man-on-first"
+    else
+      return ""
+    end
+  end
+
+  def man_on_second(offense)
+    if offense['second']
+      return "man-on-second"
+    else
+      return ""
+    end
+  end
+
+  def man_on_third(offense)
+    if offense['third']
+      return "man-on-third"
+    else
+      return ""
+    end
   end
 
   def getLogo(team_id)

@@ -1,5 +1,5 @@
 <div class="ingame-container">
-  <% linescore = getLinescore(game_key) %>
+  <% linescore = get_linescore(game_key) %>
 
   <div class="score-container">
     <p>Away: <%= teams['away']['score'] %></p>
@@ -7,10 +7,13 @@
     <p>Home: <%= teams['home']['score'] %></p>
   </div>
   <div class="bases-container">
-    <div id="first-base" class="base"></div>
-    <div id="second-base" class="base"></div>
-    <div id="third-base" class="base"></div>
-    <div id="inning-text"></div>
+    <div id="first-base" class="base <%= man_on_first(linescore['offense']) %>""></div>
+    <div id="second-base" class="base <%= man_on_second(linescore['offense']) %>"></div>
+    <div id="third-base" class="base <%= man_on_third(linescore['offense']) %>"></div>
+    <div id="inning-text">
+      <span><%= linescore['balls'] %> - <%= linescore['strikes'] %></span>
+      <span><%= linescore['outs'] %> out</span>
+    </div>
   </div>
   <div id="inning-tracker">
     <p>
