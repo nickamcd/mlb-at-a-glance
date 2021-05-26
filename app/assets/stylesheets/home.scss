@@ -7,7 +7,7 @@
   --game-border-color: rgb(153, 153, 153);
   --team-bg-color: rgb(90, 90, 90);
   --time-bg-color: rgb(109, 109, 109);
-  --game-bg-color: rgb(220, 220, 226);
+  --game-bg-color: rgb(215, 215, 225);
 }
 
 /*
@@ -46,7 +46,7 @@
 
 /*
 --------------------
-  Game Container
+  Game Display Container
 --------------------
 */
 
@@ -68,7 +68,8 @@
   flex-direction: column;
   width: 100%;
   border-radius: 5px;
-  border: 1px solid var(--game-border-color)
+  border: 1px solid var(--game-border-color);
+  background-color: var(--game-bg-color);
 }
 
 .game-display span {
@@ -116,7 +117,22 @@
 --------------------
 */
 
-.game-container {
+.ingame-container {
   height: 100%;
-  background-color: var(--game-bg-color);
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  justify-content: space-between;
+}
+
+.score-container {
+  border: 1px solid red;
+}
+
+.bases-container {
+  border: 1px solid yellow;
+}
+
+#inning-tracker {
+  border: 1px solid blue;
 }

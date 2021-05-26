@@ -1,5 +1,23 @@
 <div class="ingame-container">
-  <p>Away: <%= teams['away']['score'] %></p>
+  <% linescore = getLinescore(game_key) %>
 
-  <p>Home: <%= teams['home']['score'] %></p>
+  <div class="score-container">
+    <p>Away: <%= teams['away']['score'] %></p>
+
+    <p>Home: <%= teams['home']['score'] %></p>
+  </div>
+  <div class="bases-container">
+    <div id="first-base">
+      first
+    </div>
+    <div id="second-base">
+      second
+    </div>
+    <div id="third-base">
+      third
+    </div>
+  </div>
+  <div id="inning-tracker">
+    <%= linescore['currentInning'] %>
+  </div>
 </div>

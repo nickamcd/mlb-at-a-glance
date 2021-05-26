@@ -12,7 +12,7 @@
     <% elsif MLBStatsAPI::Games.postgame_status?(game_status) %>
       <p><%= game_status %></p>
     <% else %>
-      <%= render 'ingame', teams: teams %>
+      <%= render 'ingame', game_key: game_key, teams: teams %>
     <% end %>
   </div>
 </div>
