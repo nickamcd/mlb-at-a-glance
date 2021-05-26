@@ -1,0 +1,21 @@
+<div class="teams">
+    <span>
+      <div class="away-team">
+        <%= teams['away']['team']['name'] %>
+      </div>
+      <div class="away-team-logo">
+        <%= image_tag getLogo(teams['away']['team']['id']), class: "team-logo" %>
+      </div>
+    </span>
+
+    <p>@</p>
+
+    <span>
+      <div class="home-team">
+        <%= teams['home']['team']['name'] %>
+      </div>
+      <div class="home-team-logo">
+        <%= image_tag getLogo(teams['home']['team']['id']), class: "team-logo" %>
+      </div>
+    </span>
+  </div>

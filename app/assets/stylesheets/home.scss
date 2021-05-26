@@ -1,17 +1,46 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+/*
+--------------------
+  Page wrapper
+--------------------
+*/
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px solid red;
+  font-family: Arial, Helvetica, sans-serif;
+  /* border: 3px solid red; */
 }
+
+/*
+--------------------
+  Title
+--------------------
+*/
 
 #title {
   text-align: center;
-  border: 1px solid black;
 }
+
+#title h1 {
+  font-size: 64px;
+  margin-bottom: -50px;
+}
+
+#title h2 {
+  font-size: 32px;
+  margin-top: -50px;
+}
+
+/*
+--------------------
+  Game Container
+--------------------
+*/
 
 .game-display-container {
   width: 1100px;
@@ -28,11 +57,12 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  border: 1px solid green;
+  border: 1px solid rgb(153, 153, 153);
 }
 
 .game-display .teams {
-  border: 1px solid blue;
+  background-color: rgb(197, 209, 219);
+  border-bottom: 1px solid rgb(153, 153, 153); 
   width: 100%;
   display: flex;
   justify-content: center;
@@ -42,7 +72,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid purple;
 }
 
 .team-logo {

@@ -1,25 +1,5 @@
 <div class="game-display">
-  <div class="teams">
-    <span>
-      <div class="away-team">
-        <%= teams['away']['team']['name'] %>
-      </div>
-      <div class="away-team-logo">
-        <%= image_tag getLogo(teams['away']['team']['id']), class: "team-logo" %>
-      </div>
-    </span>
-
-    <p>@</p>
-
-    <span>
-      <div class="home-team">
-        <%= teams['home']['team']['name'] %>
-      </div>
-      <div class="home-team-logo">
-        <%= image_tag getLogo(teams['home']['team']['id']), class: "team-logo" %>
-      </div>
-    </span>
-  </div>
+  <%= render 'teams', teams: teams %>
 
   <div class="game-date">
     <% game_start_datetime = convertStartTimeToLocal(game_date) %>
@@ -36,7 +16,7 @@
     </div>
   <% else %>
     <div>
-      <p>in game</p>
+      <p><%= game_status %></p>
     </div>  
   <% end %>
 </div>
