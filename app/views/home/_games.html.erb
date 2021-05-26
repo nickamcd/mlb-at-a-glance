@@ -1,12 +1,11 @@
 <div class="game-display">
-  <% boxscore = getBoxscore(game) %>
   <div class="teams">
     <span>
       <div class="away-team">
-        <%= boxscore['teams']['away']['team']['name'] %>
+        <%= teams['away']['team']['name'] %>
       </div>
       <div class="away-team-logo">
-        <%= image_tag getLogo(boxscore['teams']['away']['team']['id']), class: "team-logo" %>
+        <%= image_tag getLogo(teams['away']['team']['id']), class: "team-logo" %>
       </div>
     </span>
 
@@ -14,10 +13,10 @@
 
     <span>
       <div class="home-team">
-        <%= boxscore['teams']['home']['team']['name'] %>
+        <%= teams['home']['team']['name'] %>
       </div>
       <div class="home-team-logo">
-        <%= image_tag getLogo(boxscore['teams']['home']['team']['id']), class: "team-logo" %>
+        <%= image_tag getLogo(teams['home']['team']['id']), class: "team-logo" %>
       </div>
     </span>
   </div>
@@ -35,5 +34,9 @@
     <div>
       <p><%= game_status %></p>
     </div>
+  <% else %>
+    <div>
+      <p>in game</p>
+    </div>  
   <% end %>
 </div>
