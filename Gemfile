@@ -55,3 +55,6 @@ gem 'mlb_stats_api', '~> 0.2.5'
 
 # Use normalize rails to normalize css styling across browsers
 gem 'normalize_rails', '~> 0.1.0'
+
+# Use timezone local to get the local time zone of the system to display game start time
+gem 'timezone_local', '~> 0.1.5'

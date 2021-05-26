@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   require 'mlb_stats_api'
+  require 'timezone_local'
 
   def index
     # Establish connection to stats api
