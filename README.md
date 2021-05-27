@@ -1,24 +1,7 @@
-# README
+# MLB At a Glance
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a small project thrown together to practice pulling information from a third party API as well as using CSS to dynamically change the information presented on the page according to the data received.
 
-Things you may want to cover:
+This application does not use ActiveRecord or a database as all of the information is pulled from the MLB Stats API. This does mean that performance/speed is dependent upon the API requests (which can sometimes be slow).
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Something I would like to do is find a better way to update the information live instead of refreshing the page and pulling the information on page load.
