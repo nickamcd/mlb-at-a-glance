@@ -178,7 +178,7 @@
 }
 
 #first-base {
-  top: 42px;
+  top: 38px;
   left: 100px;
 }
 
@@ -222,3 +222,21 @@
      -ms-flex-pack: space-evenly;
    justify-content: space-evenly;
 }
+
+@media screen and (max-width: 1200px){
+
+  .game-display-container {
+    width: 1000px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+@media screen and (max-width: 680px) {
+
+  .game-display-container {
+    width: 350px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+} 
